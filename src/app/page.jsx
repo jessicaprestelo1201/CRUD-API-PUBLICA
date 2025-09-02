@@ -1,26 +1,35 @@
 import Image from "next/image";
 import Header from "@/components/Header";
+import styles from "./page.module.css";
+import avatar from "../../public/image/avatar.png";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className={styles.container}>
       <Header />
-      <main className="flex flex-col items-center justify-center flex-1 p-10 text-center bg-gradient-to-br from-gray-100 to-gray-300">
-        <h2 className="text-4xl font-bold mb-2">3º Ano - 2TDS2</h2>
-        <p className="text-lg text-gray-700">Escola: SESI Valinhos</p>
-        <p className="text-lg text-gray-700 mb-6">Aluno(a): Jéssica Prestelo</p>
+      <main className={styles.main}>
         
-        <Image 
-          src="/avatar.png" 
-          alt="Minha foto"
-          width={200}
-          height={200}
-          className="rounded-full shadow-xl border-4 border-indigo-500"
-        />
+        <h2 className={styles.title}>3º Ano - 2TDS2</h2>
+        <p className={styles.subtitle}>Escola: SESI Valinhos</p>
+        <p className={styles.subtitleSpacing}>Aluno(a): Jéssica Prestelo</p>
+        
+        
+        <div className={styles.avatarWrapper}>
+          <Image 
+            src={avatar} 
+            alt="Minha foto"
+            width={220}
+            height={220}
+            className={styles.avatar}
+          />
+          <div className={styles.avatarGlow}></div>
+        </div>
 
-        <blockquote className="mt-8 text-xl italic text-gray-800 max-w-lg">
+    
+        <blockquote className={styles.quote}>
           “A persistência realiza o impossível.” – Provérbio Chinês
         </blockquote>
+
       </main>
     </div>
   );
