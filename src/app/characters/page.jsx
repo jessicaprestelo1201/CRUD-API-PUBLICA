@@ -19,7 +19,7 @@ export default async function Characters() {
     <div className={styles.container}>
       <Header />
       <main className={styles.main}>
-        <h2 className={styles.title}>🎥 Filmes do Studio Ghibli</h2>
+        <h2 className={styles.title}>🎥🌊 Filmes do Studio Ghibli</h2>
         {films.length > 0 ? (
           <div className={styles.grid}>
             {films.map((film) => (
